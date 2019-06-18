@@ -1,5 +1,10 @@
 import numpy as np
 
+def find_nearest(array, value):
+    array = np.asarray(array)
+    idx = (np.abs(array - value)).argmin()
+    return array[idx]
+
 def np_1_13_unique(ar, return_index=False, return_inverse=False,
            return_counts=False, axis=None):
 
